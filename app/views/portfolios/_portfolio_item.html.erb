@@ -1,7 +1,6 @@
 <!-- partial for display of portfolio items by index page -->
 <div class="card" data-id= "<%= portfolio_item.id %>" >
-  <!-- <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil?%> -->
-  <!-- Call to portfoili_img in portfolio helper to check for an image -->
+  <!--portfolio_img comes from portfolio_helper-->
   <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb') %>
   <p class="card-text">
     <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
