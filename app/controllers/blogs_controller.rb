@@ -2,24 +2,32 @@ class BlogsController < ApplicationController
 layout "blog_layout"
 access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status] }, site_admin: :all
 
-  
+  # GET /blogs
+  # GET /blogs.json
   def index
-   
+    #binding.pry
+    #@blogs = Blog.new_first
     @blogs = Blog.new_first.page(params[:page]).per(5)
-    #
+    #byebug
+    #@blogs = Blog.featured_blogs
+    #binding.pry
     @page_title = "Blogs"
   end
 
- def show
+  # GET /blogs/1
+  # GET /blogs/1.json
+  def show
     @blog = Blog.friendly.find(params[:id])
     @page_title = @blog.title
     @seo_keywords = @blog.body
   end
 
+  # GET /blogs/new
   def new
     @blog = Blog.new
   end
 
+  # GET /blogs/1/edit
   def edit
     @blog = Blog.friendly.find(params[:id])
   end
