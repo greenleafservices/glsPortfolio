@@ -1,29 +1,11 @@
-<p id="notice"><%= notice %></p>
+<div class="col-sm-8 blog-main"> <!-- This is the largest grid spacing available in order for the blog navbar to be to the right on the page -->
+  <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+<!-- ***************** Call the blog partial to get the blog data  ******************************* -->
+  <%= render @blogs%> <!-- Show all the blogs that were selected by the Controller index action -->
 
-<h1>Blogs</h1>
+<!-- Sidebar will be placed in a div to the right if the blogs - make sure there's room for it -->
+<!-- ********************* Pagination at the bottom of the index page using Kaminari **************** -->
+  <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Body</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @blogs.each do |blog| %>
-      <tr>
-        <td><%= blog.title %></td>
-        <td><%= blog.body %></td>
-        <td><%= link_to 'Show', blog %></td>
-        <td><%= link_to 'Edit', edit_blog_path(blog) %></td>
-        <td><%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Blog', new_blog_path %>
+</div>

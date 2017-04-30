@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SQL | <%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <meta name="keywords" content="<%= @seo_keywords %>" />
+
+    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <!-- Start of navigation   -->
+  <%= render 'shared/portfolio_nav' %>
+  <!-- End of navigation -->
+
+  <!-- Start of masthead -->
+  <!-- Don't show masthead to admin -->
+  <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+  <!-- End of masthead -->
+
+
+
+    <%= yield %>
+    <!-- Start of footer -->
+
+    <footer class="portfolio-footer">
+    <%= alerts %>
+
+    <%= copyright %>
+
+    </footer>
+    <!-- End of footer -->
+
+    <%= source_helper("application") %>
+
+  </body>
+</html>

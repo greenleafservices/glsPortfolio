@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--  **************************************** Blog Layout Page - called by Blog Controller ****************************** -->
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>SQL | <%= @page_title %></title>
+    <%= csrf_meta_tags %>
+    <meta name="keywords" content="<%= @seo_keywords %>" />
+    <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Start of nav Top of page -->
+    <%= render '/shared/blog_nav' %>
+    <!-- End of nav -->
+    <!-- Start of blog header -->
+    <%= render 'shared/blog_masthead' %>
+    <!--********************************* End of blog header ******************************************** -->
+    <!-- Start of container and row elements -->
+    <div class="container">
+      <div class="row">
+
+        <%= yield %> <!-- get the view from the calling controller view action -->
+
+        <!-- Start of sidebar -->
+        <%= render 'shared/blog_sidebar' %>
+             <!-- End of sidebar -->
+      </div><!-- row end /.blog-main -->
+
+      <!-- Start of footer -->
+      <%= alerts %>
+      <%= render 'shared/blog_footer' %>
+      <!-- End of footer -->
+
+      <%= source_helper("blog") %>
+      <!-- End of container and row elements -->
+    </div>
+
+  </body>
+</html>

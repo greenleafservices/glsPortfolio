@@ -1,0 +1,8 @@
+<div class="blog-header">
+  <div class="container">
+    <h1 class="blog-title">GLS Blog</h1>
+    <p class="lead blog-description">Hope you enjoy it. It's a lot of work!</p>
+    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+    <p id="notice"><%= notice %></p>
+  </div>
+</div>

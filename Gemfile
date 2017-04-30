@@ -30,14 +30,16 @@ gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-
+gem 'bcrypt', '~> 3.1.7'
+gem 'friendly_id', '~> 5.1.0'
+gem 'devise', '~> 4.2', '>= 4.2.1'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'pry-byebug'
 end
 
 group :development do
@@ -51,3 +53,18 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'bootstrap', '~> 4.0.0.alpha6'
+
+gem 'gls_view_tool', git: 'https://github.com/greenleafservices/gls_view_tool'
+gem 'petergate', '~> 1.7', '>= 1.7.3'
+gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.1'
+gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'bootstrap4-kaminari-views'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
+gem 'carrierwave', '~> 1.0'
+gem 'mini_magick', '~> 4.7'
+gem 'carrierwave-aws', '~> 1.1'
+gem 'dotenv-rails', '~> 2.2'
+gem 'certified', '~> 1.0'
+gem 'cocoon', '~> 1.2', '>= 1.2.9'
+gem 'gritter', '~> 1.2'
