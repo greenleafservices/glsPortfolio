@@ -1,0 +1,6 @@
+<!-- Called from portfolio form partial ==> f: technology_form -->
+<div class="form-group nested-fields"> <!-- jquery needs the nested-fields class in order for cocoon to work properly -->
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+  <%= link_to_remove_association 'Remove Technology', f %>
+</div>

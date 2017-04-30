@@ -1,0 +1,29 @@
+<div class="container portfolio-container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag portfolio_img(@portfolio_item.main_image, 'main'), width: '100%' %>
+      <!-- <%= image_tag @portfolio_item.main_image, width: '100%' %> -->
+    </div>
+
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
+
+      <hr>
+
+      <em><%= @portfolio_item.subtitle %></em>
+
+      <p><%= @portfolio_item.body %></p>
+
+      <hr>
+
+      <h3>Technologies Used:</h3>
+
+      <% @portfolio_item.technologies.each do |t| %>
+      <p><%= t.name %></p>
+      <% end %>
+      <%= link_to 'Edit', edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
+      <%= link_to 'Delete', portfolio_path(@portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
+      <%= link_to "View all", portfolios_path %> &nbsp <a href="#">Back to top</a>
+    </div>
+  </div>
+</div>
