@@ -161,7 +161,7 @@ body {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 55rem;
+    width: 65rem;
   }
 }
 /*
@@ -207,4 +207,18 @@ body {
   transform: translateX(-50%) translateY(-50%);
   background: image-url('GreenLeaf.jpg') no-repeat;
   background-size: cover;
+}
+
+.tech-news {
+  font-size: 16px;
+  color: black;
+  margin: 20px;
+}
+
+.tech-news > .card {
+  padding: 30px;
+}
+
+.tech-news a {
+  color: blue;
 }
