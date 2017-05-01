@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-def home
+  def home
     @posts = Blog.all
     @skills = Skill.all
   end
@@ -10,4 +10,9 @@ def home
 
   def contact
   end
+  
+  def tech_news
+    @tweets = SocialTool.twitter_search
+  end
+  
 end
