@@ -1,4 +1,5 @@
 jQuery(document).on 'turbolinks:load', ->
+  
   # Use the comments id blogs show to find the comments to work with
   # and store and comments in the comments variable 
   comments = $('#comments') 
@@ -36,4 +37,4 @@ jQuery(document).on 'turbolinks:load', ->
       textarea.val('')
       # prevent the form from reloading
     e.preventDefault()
-  return false
+    return false
