@@ -29,11 +29,11 @@ jQuery(document).on 'turbolinks:load', ->
     textarea = $this.find('#comment_content')
     # if there's something in the content
     if $.trim(textarea.val()).length > 1
-      # now wire this up with our app
+      # now use the BlogsChannel send_comment method to send the data
       App.global_chat.send_comment textarea.val(),
       comments.data('blog-id')
       # reset the text area to clear the submitted content
       textarea.val('')
       # prevent the form from reloading
     e.preventDefault()
-return false
+  return false
