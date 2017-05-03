@@ -14,5 +14,22 @@
     <strong>Body:</strong>
     <%= @blog.body %>
   </p>
-
+  
+  <%= render 'comments/comment_form' %>
+  
+    <div id="comments" data-blog-id="<%= @blog.id %>">
+      <%= render @blog.comments %>
+    </div>
+  
+  
+  <!--<div id="comments" data-blog-id="<%#= @blog.id %>">-->
+    <!--we use the comments id and the data_blog_id to work with the blogs.coffee script-->
+  <!--  <%#= render 'comments/comment_form' %>  -->
+  <!--</div>-->
+  
+  
+  <!--<%# if @blog.comments.count != 0 %>-->
+  <!--  <div>----- Previous Comments  -----</div>-->
+  <!--  <%#= render @blog.comments %>-->
+  <!--<%# end %>-->
 </div>
