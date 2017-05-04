@@ -4,7 +4,7 @@
 /*
  * Globals
  */
-$GLS_Green: #001c00;
+$GLS_Green: #013a01;
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -90,6 +90,7 @@ h6, .h6 {
   border-bottom: .05rem solid #eee;
 }
 .blog-title {
+  color: $GLS_Green;
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: normal;
@@ -144,8 +145,12 @@ h6, .h6 {
   margin-bottom: 4rem;
 }
 .blog-post-title {
+  color: $GLS_Green;
   margin-bottom: .25rem;
   font-size: 2rem;
+  a {
+    color: $GLS_Green;
+  }
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;

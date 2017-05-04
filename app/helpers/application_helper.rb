@@ -85,6 +85,9 @@ def alerts
  end
 
  def alert_generator msg
-   js add_gritter(msg, title: "GLS Portfolio", sticky: false)
+   js add_gritter(msg, title: "GLS Portfolio", sticky: false, time: 2000), extend_gritter(position: 'bottom_left')
+   
+   
+   
 end
 

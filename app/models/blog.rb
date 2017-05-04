@@ -17,4 +17,8 @@ class Blog < ApplicationRecord
   def self.featured_blogs
     limit(2)
   end
+  
+  def self.by_updated
+    order("updated_at DESC")
+  end
 end
