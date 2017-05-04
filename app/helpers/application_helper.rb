@@ -44,6 +44,10 @@ module ApplicationHelper
           title: 'Blog'
         },
         {
+          url: topics_path,
+          title: 'Blog Topics'
+        },
+        {
           url: portfolios_path,
           title: 'Portfolio'
         },

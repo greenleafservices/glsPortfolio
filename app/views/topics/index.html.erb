@@ -1,0 +1,10 @@
+<div class="col-sm-8"> 
+  <%= paginate @topics, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+<!-- ***************** Call the topic partial to get the topic data  ******************************* -->
+  <%= render @topics%> <!-- Show all the topics that were selected by the Controller index action -->
+
+  <%= paginate @topics, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+
+
+</div>
+
