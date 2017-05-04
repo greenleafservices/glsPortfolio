@@ -9,7 +9,8 @@
 
   <p>Status - <%= @blog.status.capitalize %> &nbsp <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
 <%= link_to 'Back', blogs_path %></p>
-<p>Topic - <%= @blog.topic_id%></p>
+<!--We can access the topic title directly because of the association of the blog with the topic-->
+<p>Topic - <%= @blog.topic.title%></p>
   <p>
     <strong>Body:</strong>
     <%= @blog.body %>
