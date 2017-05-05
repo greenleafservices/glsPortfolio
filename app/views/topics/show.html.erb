@@ -1,2 +1,11 @@
-<h1>Topic#show</h1>
-<p>Find me in app/views/topic/show.html.erb</p>
+<div class="col-sm-8 blog-main">
+
+  <h1><%= @topic.title %></h1>
+<!--Show the blogs that attached to this topic-->
+  <%= paginate @blogs %>
+  
+  <%= render @blogs %>
+
+  <%= paginate @blogs %>
+
+</div>

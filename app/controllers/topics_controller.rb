@@ -36,6 +36,16 @@ class TopicsController < ApplicationController
     end
   end
   
+  def show
+    @topic = Topic.find(params[:id])
+    # Get the blogs associated with this topic using logged in status
+    if logged_in?(:site_admin)
+      @blogs = @topic.blogs.by_updated.page(params[:page]).per(5)
+    else
+      @blogs = @topic.blogs.published.by_updated.page(params[:page]).per(5)
+    end
+  end
+  
   def edit
     @topic = Topic.find(params[:id])
   end

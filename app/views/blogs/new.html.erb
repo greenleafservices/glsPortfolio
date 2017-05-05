@@ -1,7 +1,8 @@
 <div class="col-sm-8 blog-main">
 
   <h1>New Blog</h1>
-
+  <!--Load the "Select a topic" (topic 6)default for the new blog-->
+  <% @blog.topic_id = 6 %>
   <%= render 'form', blog: @blog %>
 
   <%= link_to 'Back', blogs_path %>

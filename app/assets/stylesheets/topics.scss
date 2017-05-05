@@ -139,13 +139,13 @@ h6, .h6 {
 
 
 /*
- * Blog posts
+ * Topics
  */
 
 .topic-post {
   margin-bottom: 4rem;
 }
-.topic-post-title {
+.topic-title {
   color: $GLS_Green;
   margin-bottom: .25rem;
   font-size: 2rem;
@@ -153,7 +153,7 @@ h6, .h6 {
     color: $GLS_Green;
   }
 }
-.topic-post-meta {
+.topic-meta {
   margin-bottom: 1.25rem;
   color: #999;
 }

@@ -1,8 +1,8 @@
 <!-- ********************************** Topic Partial - Display the topic data ***************************** -->
 <div >
 
-  <h2 class="blog-post-title"><%= topic.title %></h2>
-    <% if logged_in?(:site_admin) %>
+  <h2 class="blog-post-title"><%= link_to topic.title, topic %></h2>
+  <% if logged_in?(:site_admin) %>
     <p class="blog-post-meta">
       <%= link_to 'Edit', edit_topic_path(topic) %> /
       <%= link_to 'Delete Topic', topic, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
