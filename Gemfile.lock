@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/greenleafservices/gls_view_tool
-  revision: f565a84199877ea461b4e7f96b1a4991693a4638
+  revision: db149a919514f7f25c64cc77eff11d906061f5de
   specs:
     gls_view_tool (0.1.0)
 

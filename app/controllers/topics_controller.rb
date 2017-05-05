@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   layout "topic_layout"
   def index
     if logged_in?(:site_admin)
-      @topics = Topic.by_alpha.page(params[:page]).per(5)
+      @topics = Topic.by_alpha.page(params[:page]).per(10)
     else
       redirect_to blogs_path, notice: "You are not authorized to access that page"
     end

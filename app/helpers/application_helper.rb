@@ -20,7 +20,7 @@ module ApplicationHelper
   end
 
   def copyright
-    GlsViewTool::Renderer.copyright 'GreenLeafServices', 'All rights reserved'
+    GlsViewTool::Renderer.copyright 'Green Leaf Services', 'All rights reserved'
   end
 
 
@@ -43,6 +43,7 @@ module ApplicationHelper
           url: blogs_path,
           title: 'Blog'
         },
+        
         {
           url: topics_path,
           title: 'Blog Topics'
