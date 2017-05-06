@@ -13,7 +13,7 @@
 <p>Topic - <%= @blog.topic.title%></p>
   <p>
     <strong>Body:</strong>
-    <%= @blog.body %>
+    <%= markdown@blog.body %>
   </p>
   
   <%= render 'comments/comment_form' %>
