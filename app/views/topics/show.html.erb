@@ -1,8 +1,10 @@
+<!-- ********************* Topic Show *************************** -->
 <div class="col-sm-8 blog-main">
 
   <h1>Blogs about <%=  @topic.title %></h1>
 <!--Show the blogs that attached to this topic-->
   <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
+  <%#= @blogs.inspect %>
   
   <%= render @blogs %>
 
