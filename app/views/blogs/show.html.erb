@@ -17,19 +17,13 @@
   </p>
   
   <%= render 'comments/comment_form' %>
-  
+    <!--we use the comments id style class and the data_blog_id to work with the blogs.coffee script-->
     <div id="comments" data-blog-id="<%= @blog.id %>">
       <%= render @blog.comments %>
     </div>
   
   
-  <!--<div id="comments" data-blog-id="<%#= @blog.id %>">-->
-    <!--we use the comments id and the data_blog_id to work with the blogs.coffee script-->
-  <!--  <%#= render 'comments/comment_form' %>  -->
-  <!--</div>-->
-  
-  
-  <!--<%# if @blog.comments.count != 0 %>-->
+   <!--<%# if @blog.comments.count != 0 %>-->
   <!--  <div>----- Previous Comments  -----</div>-->
   <!--  <%#= render @blog.comments %>-->
   <!--<%# end %>-->
