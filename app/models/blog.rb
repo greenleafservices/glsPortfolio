@@ -21,4 +21,9 @@ class Blog < ApplicationRecord
   def self.by_updated
     order("updated_at DESC")
   end
+  
+  def self.recent
+    order("created_at DESC")
+  end
+
 end
