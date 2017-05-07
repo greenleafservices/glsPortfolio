@@ -3,17 +3,7 @@
 
   <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
   <p class="blog-post-meta">Last updated <%= distance_of_time_in_words(blog.updated_at, Time.now)  %> ago</p>
-  <!--<%# if logged_in?(:site_admin) %>-->
-  <!--  <p class="blog-post-meta">-->
-  <!--    <%#= link_to blog.status.capitalize, toggle_status_blog_path(blog) %> /-->
-  <!--    <%#= link_to 'Edit', edit_blog_path(blog) %> /-->
-  <!--    <%#= link_to 'Delete Post', blog, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>-->
-  <!--  </p>-->
-  <!--<%# end %>-->
   
-  <!--We need to specify the partial command because we need to pass the local variable blog to the partial-->
-  <!--If we con't do it this way. we'll get an error from the Action Controller-->
-  <!--NameError in Blogs#index - undefined local variable or method `blog' -->
   <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
   
 
