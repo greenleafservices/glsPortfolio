@@ -13,13 +13,13 @@
 
   <body>
   <!-- Start of navigation   -->
-  <%= render 'shared/portfolio_nav' %>
-  <!-- End of navigation -->
-
-  <!-- Start of masthead -->
-  <!-- Don't show masthead to admin -->
-  <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
-  <!-- End of masthead -->
+    <%= render 'shared/portfolio_nav' %>
+    <!-- End of navigation -->
+  
+    <!-- Start of masthead -->
+    <!-- Don't show masthead to admin -->
+    <%= render 'shared/portfolio_masthead' unless logged_in?(:site_admin) %>
+    <!-- End of masthead -->
 
 
 
@@ -27,14 +27,12 @@
     <!-- Start of footer -->
 
     <footer class="portfolio-footer">
-    <%= alerts %>
-
-    <%= copyright %>
+      <%= alerts %>
+  
+      <%= copyright %>
 
     </footer>
     <!-- End of footer -->
 
-    <%= source_helper("application") %>
-
-  </body>
+   </body>
 </html>
