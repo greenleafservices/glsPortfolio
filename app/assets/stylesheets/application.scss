@@ -230,3 +230,22 @@ body {
 .navbar-toggler {
   background:yellow;
 }
+
+.app-card-container {
+  background: green;
+  color: black;
+  text-align: center;
+}
+
+.app-card-container > .card {
+  padding: 30px;
+  
+}
+.app-card-container a {
+  color: black;
+  
+}
+
+.mastfoot {
+  color: white;
+}
