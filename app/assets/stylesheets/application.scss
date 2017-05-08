@@ -246,6 +246,16 @@ body {
   
 }
 
+.app-card-container > .gls-text {
+  font-size: 5px;
+  text-align: left;
+}
+
+.app-card-container > h4 {
+  font-size: 5px;
+  text-align: left;
+}
+
 .mastfoot {
   color: white;
 }
@@ -256,6 +266,16 @@ body {
 }
 
 .skill {
+  font-size: 5px;
   margin-top: 5px;
   margin-bottom: 5px;
+}
+
+.btn-gls {
+  background: $GLS_Green;
+  color: yellow;
+}
+
+.bg-gls {
+  background: $GLS_Green;
 }

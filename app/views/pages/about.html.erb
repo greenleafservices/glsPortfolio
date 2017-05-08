@@ -1,50 +1,41 @@
 <div class ="app-card-container">
   <div class = "card">
     <h1>Green Leaf Services</h1>
-    <h2>Our goal is to provide excellent service before, during and after the development process</h2>
+    <h3>Our goal is to provide excellent service before, during and after the development process</h3>
     <hr>
     
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-2">
         <!-- <img src="http://placehold.it/250x250" alt="No image"> -->
-        <!-- <%= image_tag "http://placehold.it/250x250", width:250, height:250, alt: "No image available" %> -->
-        <%= image_tag "GreenLeaf.jpg", width:250, height:250, alt: "No image available" %>
-        
-        <div class="skills">
-          <% @skills.each do |skill| %>
-            <div class="skill">
-              <h4><%= skill.title %></h4>
-              <div class="progress">
-                <!--Accessible Rich Internet Applications (ARIA) defines ways to make Web content and Web applications-->
-                  <!--(especially those developed with Ajax and JavaScript) more accessible to people with disabilities-->
-                <div
-                  class="progress-bar progress-bar-striped bg-warning"
-                  role="progressbar"
-                  aria-valuenow="<%= skill.percent_utilized %>"
-                  aria-valuemax="100"
-                  style="width: <%= skill.percent_utilized %>%">
-                </div>
+        <!-- <%#= image_tag "http://placehold.it/250x250", width:250, height:250, alt: "No image available" %> -->
+        <%= image_tag "GreenLeaf.jpg", width:100, height:100, alt: "No image available" %>
+      </div>
+      <div class="col-md-2">
+        <h5 align="left" >We aim to please! </h5>
+      </div>
+      <div class="skills col-md-6">
+        <h4>Skills we utilize</h4>
+        <% @skills.each do |skill| %>
+          <div class="skill">
+            <h4><%= skill.title %></h4>
+            <div class="progress">
+              <!--Accessible Rich Internet Applications (ARIA) defines ways to make Web content and Web applications-->
+                <!--(especially those developed with Ajax and JavaScript) more accessible to people with disabilities-->
+              <div
+                class="progress-bar bg-gls"
+                role="progressbar"
+                aria-valuenow="<%= skill.percent_utilized %>"
+                aria-valuemax="100"
+                style="width: <%= skill.percent_utilized %>%">
               </div>
             </div>
-          <% end %>
-        </div>
-      </div>
-      
-      <div class="col-md-8">
-        <br>
-        <div class="col-md-8">
-          <br>
-          <div class="col-md-8">
-            <br>
-            <div class="col-md-9">
-              <h2>We aim to please!</h2>
-            </div>
           </div>
-        </div> 
+        <% end %>
       </div>
-      <p>
+      <div class="col-md-2">
+          <p>
           <button
-            class="btn btn-primary"
+            class="btn btn-gls btn-block"
             type="button"
             data-toggle="collapse"
             data-target="#jobHistory"
@@ -55,7 +46,7 @@
           </button>
 
           <button
-            class="btn btn-primary"
+            class="btn btn-gls btn-block"
             type="button"
             data-toggle="collapse"
             data-target="#education"
@@ -69,25 +60,26 @@
         <p>
           <div class="collapse" id="jobHistory">
             <div class="card card-block">
-              Job 1
+              Business Manager - School, College/University, Church
             </div>
             <div class="card card-block">
-              Job 2
+              IT Director - School, Church
             </div>
           </div>
 
           <div class="collapse" id="education">
             <div class="card card-block">
-              School 1
+              Udemy
             </div>
             <div class="card card-block">
-              School 2
+              Lynda
             </div>
             <div class="card card-block">
-              School 3
+              Nettrak
             </div>
           </div>
-</p>
+        </p>
+      </div>
     </div>
     
   </div>
