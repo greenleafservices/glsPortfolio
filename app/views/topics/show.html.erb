@@ -6,6 +6,7 @@
   <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
   <%#= @blogs.inspect %>
   
+  <% session[:admin_action] = "Topics" %>
   <%= render @blogs %>
 
   <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>

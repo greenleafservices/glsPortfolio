@@ -2,6 +2,9 @@
   <%= paginate @blogs, theme: 'twitter-bootstrap-4', pagination_class: "pagination-sm" %>
 <!-- ***************** Call the blog partial to get the blog data  ******************************* -->
   <%#= @blogs.inspect %>
+  
+  <% session[:admin_action] = "Blogs" %>
+  
   <%= render @blogs%> <!-- Show all the blogs that were selected by the Controller index action -->
 
 <!-- Sidebar will be placed in a div to the right if the blogs - make sure there's room for it -->

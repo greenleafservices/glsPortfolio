@@ -79,7 +79,12 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end
-    redirect_to blogs_url, notice: 'Post status has been updated.'
+    if session[:admin_action] == "Blogs"
+      redirect_to blogs_url, notice: 'Post status has been updated.'
+    else  
+      redirect_to topic_path(@blog.topic_id), notice: 'Topic post status has been updated.'
+    end 
+   
   end
 
   private
