@@ -1,30 +1,16 @@
-<!-- This is a dropdown navbar that is toggled by the button in the last div -->
+<nav class="navbar navbar-toggleable-md blog-nav portfolio-gls">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<div class="collapse bg-inverse" id="navbarHeader">
   <div class="container">
-    <div class="row">
-      <div class="col-sm-8 py-4">
-        <h4 class="text-white">What we do</h4>
-        <p class="text-white">Our goal is to provide excellent service before, during and after the development process</p>
-      </div>
-      <div class="col-sm-4 py-4">
-        <h4 class="text-white">Explore</h4>
-        <ul class="list-unstyled">
-          <%= nav_helper 'text-white', 'li' %>
-          <li><%= login_helper "text-white"  %></li>
+    <%= image_tag "GreenLeaf.jpg", width:50, height:50, alt: "No image available" %>
 
-
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <%= nav_helper 'nav-link', 'li' %>  
+        <%= login_helper 'nav-link' %>  
+      </ul>
     </div>
   </div>
-</div>
-
-<div class="navbar navbar-inverse bg-inverse">
-  <div class="container d-flex justify-content-between">
-    <a href="#" class="navbar-brand">Green Leaf Services</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</div>
+</nav>

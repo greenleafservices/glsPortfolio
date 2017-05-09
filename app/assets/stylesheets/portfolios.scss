@@ -2,7 +2,7 @@
 @import "jquery-ui";
 @import "gritter";
 
-$GLS_Green: #001c00;
+$GLS_Green: #013a01;
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
@@ -99,3 +99,38 @@ ul {
   padding-top: 30px;
 
 }
+/* Nav links */
+.portfolio-gls {
+  background-color: $GLS_Green; 
+}
+
+.nav-link {
+  position: relative;
+  padding: 1rem;
+  font-weight: 500;
+  color: yellow;
+}
+.nav-link:hover,
+.nav-link:focus {
+  color: #fff;
+  background-color: transparent;
+}
+
+/* Active state gets a caret at the bottom */
+.nav-link.active {
+  color: #fff;
+}
+.nav-link.active:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -.3rem;
+  vertical-align: middle;
+  content: "";
+  border-right: .3rem solid transparent;
+  border-bottom: .3rem solid;
+  border-left: .3rem solid transparent;
+}
+
