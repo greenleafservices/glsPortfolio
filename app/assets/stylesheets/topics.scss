@@ -11,6 +11,12 @@ $GLS_Green: #013a01;
   }
 }
 
+a,
+a:focus,
+a:hover {
+  color: $GLS_Green;
+}
+
 body {
   font-family: "Arial", Georgia, Times, serif;
   color: black;

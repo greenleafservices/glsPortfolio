@@ -12,7 +12,7 @@
 
       <em><%= @portfolio_item.subtitle %></em>
 
-      <p><%= @portfolio_item.body %></p>
+      <p><%= markdown @portfolio_item.body %></p>
 
       <hr>
 
@@ -23,7 +23,7 @@
       <% end %>
       <%= link_to 'Edit', edit_portfolio_path(@portfolio_item.id) if logged_in?(:site_admin) %>
       <%= link_to 'Delete', portfolio_path(@portfolio_item.id), method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %>
-      <%= link_to "View all", portfolios_path %> &nbsp <a href="#">Back to top</a>
+      <%= link_to "View all projects", portfolios_path %>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
-@import "font-awesome";
+
 @import "bootstrap";
+@import "font-awesome";
 @import "gritter";
 
 /*
@@ -15,7 +16,7 @@ $GLS_Green: #013a01;
 a,
 a:focus,
 a:hover {
-  color: #fff;
+  color: $GLS_Green;
 }
 /*
 * Base structure
@@ -122,6 +123,7 @@ h6, .h6 {
   font-size: 1rem;
   color: #999;
 }
+
 
 @media (min-width: 40em) {
   .blog-title {
