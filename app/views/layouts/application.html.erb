@@ -6,7 +6,11 @@
     <title>SQL | <%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
-
+    
+    <link href="https://fonts.googleapis.com/css?family=Lato|Roboto" rel="stylesheet">
+    
+    <%= favicon_link_tag 'favicons/gls-favicon.ico' %>
+    
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -15,14 +19,24 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          
+          <!--If you want a video background, place it here-->
+          <!--<%#= video_tag(-->
+          <!--    'HardDrivePhotojpeg.mp4',-->
+          <!--    id: 'background',-->
+          <!--    autoplay: true,-->
+          <!--    loop: true,-->
+          <!--    muted: true,-->
+          <!--    poster: 'home_bg.png'-->
+          <!--  )-->
+          <!--  %>-->
           <%= render "shared/application_nav" %>
 
           <%= yield %>
           <%= render 'shared/application_footer' %>
           <!-- alerts method is in Application Helper -->
           <%= alerts %>
-          <%= source_helper("application") %>
+          <!-- source_helper is in Application Helper -->
+          <!--<%#= source_helper("application") %>-->
         </div>
       </div>
     </div>

@@ -6,19 +6,28 @@ class BlogsController < ApplicationController
   # GET /blogs
   # GET /blogs.json
   def index
-    @blogs = Blog.page(params[:page]).per(5)
+    if logged_in?(:site_admin)
+      @blogs = Blog.by_updated.page(params[:page]).per(5)
+    else
+      @blogs = Blog.published.by_updated.page(params[:page]).per(5)
+    end
     @page_title = "My Portfolio Blog"
   end
 
   # GET /blogs/1
   # GET /blogs/1.json
   def show
-    @blog = Blog.includes(:comments).friendly.find(params[:id])
-    @comment = Comment.new
+    if logged_in?(:site_admin) || @blog.published?
+      @blog = Blog.includes(:comments).friendly.find(params[:id])
+      @comment = Comment.new
 
-    @page_title = @blog.title
-    @seo_keywords = @blog.body
+      @page_title = @blog.title
+      @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: "You are not authorized to access that page"
+    end
   end
+  
 
   # GET /blogs/new
   def new
@@ -55,8 +64,6 @@ class BlogsController < ApplicationController
     end
   end
 
-  # DELETE /blogs/1
-  # DELETE /blogs/1.json
   def destroy
     @blog.destroy
     respond_to do |format|
@@ -66,13 +73,18 @@ class BlogsController < ApplicationController
   end
 
   def toggle_status
+    #byebug
     if @blog.draft?
       @blog.published!
     elsif @blog.published?
       @blog.draft!
     end
-        
-    redirect_to blogs_url, notice: 'Post status has been updated.'
+    if session[:admin_action] == "Blogs"
+      redirect_to blogs_url, notice: 'Post status has been updated.'
+    else  
+      redirect_to topic_path(@blog.topic_id), notice: 'Topic post status has been updated.'
+    end 
+   
   end
 
   private
@@ -83,6 +95,6 @@ class BlogsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_params
-      params.require(:blog).permit(:title, :body)
+      params.require(:blog).permit(:title, :body, :topic_id, :status)
     end
 end

@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/greenleafservices/gls_view_tool
-  revision: f565a84199877ea461b4e7f96b1a4991693a4638
+  revision: db149a919514f7f25c64cc77eff11d906061f5de
   specs:
     gls_view_tool (0.1.0)
 
@@ -208,6 +208,7 @@ GEM
     rb-fsevent (0.9.8)
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
+    redcarpet (3.4.0)
     redis (3.3.3)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
@@ -279,6 +280,7 @@ DEPENDENCIES
   carrierwave-aws (~> 1.1)
   certified (~> 1.0)
   cocoon (~> 1.2, >= 1.2.9)
+  coderay (~> 1.1, >= 1.1.1)
   coffee-rails (~> 4.2)
   devise (~> 4.2, >= 4.2.1)
   dotenv-rails (~> 2.2)
@@ -297,6 +299,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.0)
   rails (~> 5.0.1)
+  redcarpet (~> 3.4)
   redis (~> 3.3, >= 3.3.3)
   sass-rails (~> 5.0)
   spring

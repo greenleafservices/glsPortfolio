@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "gritter";
 
+
 /*
  * Globals
 
@@ -24,19 +25,29 @@ a:hover {
 }
 
 
-
 /*
 * Base structure
 */
+
 html,
 body {
   height: 100%;
   background-color: $GLS_Green;
+  font-family: 'Lato', sans-serif;
 }
 body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -221,4 +232,61 @@ body {
 
 .tech-news a {
   color: blue;
+}
+
+.navbar-brand {
+  color: yellow;
+}
+
+.navbar-toggler {
+  background:yellow;
+}
+
+.app-card-container {
+  background: green;
+  color: black;
+  text-align: center;
+}
+
+.app-card-container > .card {
+  padding: 30px;
+  
+}
+.app-card-container a {
+  color: black;
+  
+}
+
+.app-card-container > .gls-text {
+  font-size: 5px;
+  text-align: left;
+}
+
+.app-card-container > h4 {
+  font-size: 5px;
+  text-align: left;
+}
+
+.mastfoot {
+  color: white;
+}
+
+.card-block {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.skill {
+  font-size: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.btn-gls {
+  background: $GLS_Green;
+  color: yellow;
+}
+
+.bg-gls {
+  background: $GLS_Green;
 }

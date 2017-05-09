@@ -12,15 +12,17 @@ module ApplicationHelper
     end
   end
 
-  def source_helper(layout_name)
+  def source_helper(styles)
       if session[:source]
-        greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name} layout"
-        content_tag(:p, greeting, class: "source-greeting")
+        # greeting = "Thanks for visiting me from #{session[:source]} and you are on the #{layout_name} layout"
+        # content_tag(:p, greeting, class: "source-greeting")
+        greeting = "Thanks for visiting us from #{session[:source]}, please feel free to #{ link_to 'contact us', contact_path } if we can help."
+        content_tag(:div, greeting.html_safe, class: styles)
       end
   end
 
   def copyright
-    GlsViewTool::Renderer.copyright 'GreenLeafServices', 'All rights reserved'
+    GlsViewTool::Renderer.copyright 'Green Leaf Services', 'All rights reserved'
   end
 
 
@@ -33,15 +35,20 @@ module ApplicationHelper
 
         {
           url: about_me_path,
-          title: 'About Me'
+          title: 'About Us'
         },
         {
           url: contact_path,
-          title: 'Contact'
+          title: 'Contact Us'
         },
         {
           url: blogs_path,
           title: 'Blog'
+        },
+        
+        {
+          url: topics_path,
+          title: 'Blog Topics'
         },
         {
           url: portfolios_path,
@@ -85,6 +92,9 @@ def alerts
  end
 
  def alert_generator msg
-   js add_gritter(msg, title: "GLS Portfolio", sticky: false)
+   js add_gritter(msg, title: "GLS Portfolio", sticky: false, time: 2000), extend_gritter(position: 'bottom_left')
+   
+   
+   
 end
 

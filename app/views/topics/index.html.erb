@@ -1,0 +1,27 @@
+<div class="col-sm-12"> 
+   
+    <table>
+        <tr>
+          <th>Title</th>
+          <th>Blogs &nbsp&nbsp</th>
+          <th>Actions</th>
+        </tr>
+        <!--Make an array of the Topics-->
+        <% @topics.each do |topic| %>
+          <tr>
+            <% if topic.blogs.count !=0 %>
+              <td><%= link_to topic.title, topic_path(topic) %> &nbsp </td>
+            <% else %>
+              <td><%= topic.title %> &nbsp </td>
+            <% end %>
+            <td><%= topic.blogs.count %> </td>
+            <td><%= link_to 'Edit', edit_topic_path(topic) %> </td>
+              <% if  topic.blogs.count == 0 && topic.title != "Select a topic" %>
+                <td><%= link_to 'Delete Topic', topic, method: :delete, data: { confirm: 'Are you sure?' } if logged_in?(:site_admin) %> </td>
+              <% end %> 
+          </tr>
+        <% end %>
+      </table>
+  
+</div>  
+

@@ -1,11 +1,11 @@
 class PagesController < ApplicationController
   def home
     @posts = Blog.all
-    @skills = Skill.all
   end
 
   def about
     #about page will run from here
+    @skills = Skill.all
   end
 
   def contact
