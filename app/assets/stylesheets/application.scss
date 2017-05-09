@@ -6,23 +6,17 @@
 
  */
 $GLS_Green: #013a01;
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
 /* Links */
 a,
 a:focus,
 a:hover {
   color: #fff;
 }
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
-}
-
 
 /*
 * Base structure
@@ -63,6 +57,7 @@ h6, .h6 {
   vertical-align: top;
 }
 .cover-container {
+  font-size: 18px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -310,4 +305,18 @@ h6, .h6 {
 
 .bg-gls {
   background: $GLS_Green;
+}
+
+.blog-gls {
+  background-color: $GLS_Green; 
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: $GLS_Green;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
 }

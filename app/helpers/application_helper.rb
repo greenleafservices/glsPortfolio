@@ -26,7 +26,7 @@ module ApplicationHelper
   end
 
 
- def nav_items
+  def nav_items
       [
         {
           url: root_path,
@@ -52,7 +52,7 @@ module ApplicationHelper
         },
         {
           url: portfolios_path,
-          title: 'Portfolio'
+          title: 'Recent Projects'
         },
         {
         url: tech_news_path,
@@ -60,6 +60,7 @@ module ApplicationHelper
         },
       ]
   end
+  
   def nav_helper style, tag_type
     nav_links = ''
 
@@ -77,24 +78,21 @@ module ApplicationHelper
 # NAV
 #   nav_links.html_safe
   end
-end
+  
+  def active? path
+      "active" if current_page? path
+  end
 
-def active? path
-    "active" if current_page? path
-end
+  def alerts
+     alert = (flash[:alert] || flash[:error] || flash[:notice])
+  
+     if alert
+       alert_generator alert
+     end
+  end
 
-def alerts
-   alert = (flash[:alert] || flash[:error] || flash[:notice])
-
-   if alert
-     alert_generator alert
-   end
- end
-
- def alert_generator msg
+  def alert_generator msg
    js add_gritter(msg, title: "GLS Portfolio", sticky: false, time: 2000), extend_gritter(position: 'bottom_left')
-   
-   
-   
-end
+  end
 
+end

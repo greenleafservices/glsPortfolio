@@ -3,6 +3,12 @@
 @import "gritter";
 
 $GLS_Green: #013a01;
+@media (min-width: 48em) {
+  html {
+    font-size: 18px;
+  }
+}
+
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
@@ -134,3 +140,7 @@ ul {
   border-left: .3rem solid transparent;
 }
 
+.navbar-toggler {
+  background:yellow;
+  color: black;
+}

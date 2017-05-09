@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>SQL | <%= @page_title %></title>
+    <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
     <meta name="keywords" content="<%= @seo_keywords %>" />
     
@@ -18,6 +18,7 @@
   <body>
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
+        
         <div class="cover-container">
           <!--If you want a video background, place it here-->
           <!--<%#= video_tag(-->
@@ -29,7 +30,7 @@
           <!--    poster: 'home_bg.png'-->
           <!--  )-->
           <!--  %>-->
-          <%= render "shared/application_nav" %>
+          <%= render "shared/application_nav" %> 
 
           <%= yield %>
           <%= render 'shared/application_footer' %>
