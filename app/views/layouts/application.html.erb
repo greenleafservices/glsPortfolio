@@ -16,30 +16,33 @@
   </head>
 
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        
-        <div class="cover-container">
-          <!--If you want a video background, place it here-->
-          <!--<%#= video_tag(-->
-          <!--    'HardDrivePhotojpeg.mp4',-->
-          <!--    id: 'background',-->
-          <!--    autoplay: true,-->
-          <!--    loop: true,-->
-          <!--    muted: true,-->
-          <!--    poster: 'home_bg.png'-->
-          <!--  )-->
-          <!--  %>-->
-          <%= render "shared/application_nav" %> 
+    <%= render "shared/application_nav" %> 
 
-          <%= yield %>
-          <%= render 'shared/application_footer' %>
-          <!-- alerts method is in Application Helper -->
-          <%= alerts %>
-          <!-- source_helper is in Application Helper -->
-          <!--<%#= source_helper("application") %>-->
-        </div>
+    <!--<div class="site-wrapper">-->
+      <!--<div class="site-wrapper-inner">-->
+        
+        <!--<div class="cover-container">-->
+        <div>
+            <!--If you want a video background, place it here-->
+            <!--<%#= video_tag(-->
+            <!--    'HardDrivePhotojpeg.mp4',-->
+            <!--    id: 'background',-->
+            <!--    autoplay: true,-->
+            <!--    loop: true,-->
+            <!--    muted: true,-->
+            <!--    poster: 'home_bg.png'-->
+            <!--  )-->
+            <!--  %>-->
+            
+            <%= yield %>
+            <%= render 'shared/application_footer' %>
+            <!-- alerts method is in Application Helper -->
+            <%= alerts %>
+            <!-- source_helper is in Application Helper -->
+            <!--<%#= source_helper("application") %>-->
+          
+        
       </div>
-    </div>
+    <!--</div>-->
   </body>
 </html>

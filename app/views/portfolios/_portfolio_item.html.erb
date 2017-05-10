@@ -1,9 +1,9 @@
-<!-- partial for display of portfolio items by index page -->
+<!-- partial for display of all portfolio items on index page -->
 <div class="card" data-id= "<%= portfolio_item.id %>" >
   <!--portfolio_img comes from portfolio_helper-->
-  <!--<%#= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), width: '100%' %>-->
   <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb'), size: "150" %>
   <p class="card-text">
+    <!--Show the link to the show page and the subtitle for the item-->
     <span><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></span> <%= portfolio_item.subtitle %>
   </p>
 </div>

@@ -55,8 +55,8 @@ module ApplicationHelper
           title: 'Recent Projects'
         },
         {
-        url: tech_news_path,
-        title: 'Tech News'
+          url: tech_news_path,
+          title: 'New you can use'
         },
       ]
   end

@@ -10,11 +10,17 @@ $GLS_Green: #013a01;
 }
 
 body {
-  min-height: 75rem; /* Can be removed; just added for demo purposes */
+  height: 100%;
+  font-family: 'Lato', sans-serif;
+  color: black;
+  background-color: #fff;
 }
+/*
+ * Override Bootstrap's default container.
+ */
 
-.navbar {
-  margin-bottom: 0;
+.container {
+  max-width: 60rem;
 }
 
 .jumbotron {
@@ -84,15 +90,8 @@ footer p {
 .portfolio-footer p:last-child {
   margin-bottom: 0;
 }
-// .portfolio-form {
-//   padding: 20px;
-// }
-.login20 > .card {
-  width: 20rem;
-  margin: 0 auto; // auto - horizontally center the element within its container
-  float: none;
-}
-.login40 > .card {
+
+.card-40 > .card {
   width: 40rem;
   margin: 0 auto; // auto - horizontally center the element within its container
   float: none;

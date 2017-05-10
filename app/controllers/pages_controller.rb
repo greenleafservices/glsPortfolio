@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   end
   
   def tech_news
+    # SocialTool is in the lib folder
     @tweets = SocialTool.twitter_search
   end
   

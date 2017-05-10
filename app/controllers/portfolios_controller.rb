@@ -22,7 +22,9 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
     # Rails 5.1 way of rendering nothing
     head :created
   end
-
+  
+  # Create separate action for each technology if necessary
+  # Here only for demo purposes
   def angular
       @angular_portfolio_items = Portfolio.angular
   end
@@ -43,13 +45,11 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
     end
   end
   def show
-    #binding.pry
     #@portfolio_item = Portfolio.find(params[:id])
   end
 
   def edit
     #@portfolio_item = Portfolio.find(params[:id])
-    # 3.times { @portfolio_item.technologies.build }
   end
 
   def update
@@ -72,7 +72,7 @@ access all: [:show, :index, :angular], user: {except: [:destroy, :new, :create, 
     # Destroy/delete the record
     @portfolio_item.destroy
 
-    # Redirect
+    # Redirect back to index
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
     end

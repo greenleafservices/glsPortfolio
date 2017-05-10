@@ -5,7 +5,8 @@
  * Globals
 
  */
-$GLS_Green: #013a01;
+// $GLS_Green: #013a01;
+$GLS_Green: #003000;
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -43,7 +44,12 @@ h6, .h6 {
   font-family: 'Roboto', sans-serif;
 }
 
+.container {
+  max-width: 60rem;
+}
+
 /* Extra markup and styles for table-esque vertical and horizontal centering */
+
 .site-wrapper {
   display: table;
   width: 100%;
@@ -56,11 +62,11 @@ h6, .h6 {
   display: table-cell;
   vertical-align: top;
 }
-.cover-container {
-  font-size: 18px;
-  margin-right: auto;
-  margin-left: auto;
-}
+// .cover-container {
+//   font-size: 18px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
 
 /* Padding for spacing */
 .inner {
@@ -149,14 +155,6 @@ h6, .h6 {
 }
 
 
-/*
- * Footer
- */
-
-.mastfoot {
-  color: rgba(255,255,255,.5);
-}
-
 
 /*
  * Affix and center
@@ -171,6 +169,7 @@ h6, .h6 {
   .mastfoot {
     position: fixed;
     bottom: 0;
+    color: white;
   }
   /* Start the vertical centering */
   .site-wrapper-inner {
@@ -178,7 +177,7 @@ h6, .h6 {
   }
   /* Handle the widths */
   .masthead,
-  .mastfoot,
+  .mastf
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
@@ -188,7 +187,7 @@ h6, .h6 {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 65rem;
+    width: 100%;
   }
 }
 /*
@@ -259,9 +258,16 @@ h6, .h6 {
 }
 
 .app-card-container {
-  background: green;
+  background: $GLS_Green;
+  // margin: 0 auto; // auto - horizontally center the element within its container
+  margin-top: 100px;
+  margin-right: auto;
+  margin-bottom: 0px;
+  margin-left: auto;
   color: black;
   text-align: center;
+  width: 80%;
+ 
 }
 
 .app-card-container > .card {
@@ -283,7 +289,11 @@ h6, .h6 {
   text-align: left;
 }
 
-.mastfoot {
+.cover-heading {
+  color: white;
+}
+
+.lead {
   color: white;
 }
 

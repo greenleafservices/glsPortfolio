@@ -6,7 +6,7 @@
 /*
  * Globals
  */
-$GLS_Green: #013a01;
+$GLS_Green: #003000;
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -55,9 +55,6 @@ h6, .h6 {
  */
 .blog-gls {
   background-color: $GLS_Green; 
-}
-.navbar-brand {
-  color: yellow;
 }
 
 .navbar-toggler {
