@@ -253,13 +253,10 @@ h6, .h6 {
   color: yellow;
 }
 
-// .navbar-toggler {
-//   background:yellow;
-// }
-
 .navbar-toggler {
-  color: yellow;
-} 
+  background:yellow;
+  color: black;
+}
 
 .app-card-container {
   background: $GLS_Green;

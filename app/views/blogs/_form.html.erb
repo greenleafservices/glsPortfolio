@@ -6,37 +6,95 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title %>
+    <%= f.label :title, class:'col-form-label' %>
     <%= f.text_field :title, class:'form-control'  %>
   </div>
   
   <div class="form-group">
-    <%= f.label :topic_id %>
+    <%= f.label :topic_id, class:'col-form-label col-form-label' %>
     <%= f.collection_select(:topic_id, Topic.all, :id, :title,
                               {
                                 selected: blog.topic.id,
                                 include_blank: true
                               },
-                              class: 'form-control'
+                              class: 'col-form-label'
                             )
     %>
   </div>
   
    <div class="form-group">
     <%= f.radio_button :status, 'draft' %>
-    <%= f.label :status, 'Draft' %>
+    <%= f.label :status, 'Draft', class:'col-form-label' %>
 
     <%= f.radio_button :status, 'published' %>
-    <%= f.label :status, 'Published' %>
+    <%= f.label :status, 'Published', class:'col-form-label' %>
   </div>
   
   <div class="form-group">
-    <%= f.label :body %>
+    <%= f.label :body, class:'col-form-label' %>
     <%= f.text_area :body,cols:10, rows:10, class:'form-control'  %>
   </div>
 
   <div class="form-group">
-    <%= f.submit "Update", class: 'btn btn-primary' %>
+    <%= f.submit "Update", class: 'btn btn-primary col-form-label' %>
   </div>
 <% end %>
+<div class="container">
+
+  <div class="form-control-label">Medical Questionnaire</div>
+  
+  <form>
+  
+    <fieldset class="form-group">
+      <h5>Owner Info</h5>
+  
+      <div class="form-group row">
+        <label class="text-sm-right text-md-right col-sm-1 col-md-1" for="ownername">Owner1</label>
+        <div class="col-sm-4 col-md-4">
+          <input class="form-control" type="text" id="ownername" placeholder="Your Name4">        
+        </div>
+        <label class="text-sm-right text-md-right col-sm-1 col-md-1" for="owneremail">Address1</label>
+        <div class="col-sm-4 col-md-4">
+          <input class="form-control" type="text" id="owneremail" placeholder="Address4">
+        </div>
+        <label class="form-control-label text-sm-right text-md-right col-sm-1 col-md-1 col-form-label" for="owneremail">Address1</label>
+        <div class="col-sm-1 col-md-1">
+          <input class="form-control" type="text"  placeholder="Addrs1">
+        </div>
+      </div><!-- form-group -->
+  
+      <div class="form-group row">
+        <label class="form-control-label col-md-1 text-md-right col-form-label" for="owneremail">Address</label>
+        <div class="col-md-10">
+          <input class="form-control" type="text"  placeholder="Address">
+        </div>
+      </div><!-- form-group -->
+  
+      <div class="form-group row">
+       <label class="form-control-label col-sm-1 text-sm-right col-form-label" for="owneremail">City</label>
+        <div class="form-group col-sm-3 ">
+          <input class="form-control" type="text" id="ownercity" placeholder="City">
+        </div><!-- form-group -->
+  
+         <label class="form-control-label col-form-label" >ST</label>
+         <div class="form-group col-sm-1">
+          <input class="form-control" type="text"  placeholder="ST">
+        </div>
+              
+         <label class="form-control-label col-form-label" for="ownerzip">Zip</label>
+         <div class="form-group col-sm-2">
+          <input class="form-control" type="text" id="ownerzip" placeholder="Zip">
+          </div><!-- form-group -->
+      </div><!-- form-group -->
+  
+      <div class="form-group row">
+        <div class="offset-md-2 col-md-10">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div><!-- offset col -->
+      </div><!-- form-group -->
+  
+    </fieldset><!-- fieldset -->
+  </form>
+</div>
+
 
