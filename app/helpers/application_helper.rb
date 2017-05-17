@@ -22,7 +22,7 @@ module ApplicationHelper
   end
 
   def copyright
-    GlsViewTool::Renderer.copyright 'Green Leafer Services', 'All rights reserved'
+    GlsViewTool::Renderer.copyright 'Green Leaf Services', 'All rights reserved'
   end
 
 
