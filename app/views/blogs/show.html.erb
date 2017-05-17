@@ -28,7 +28,7 @@
   <%= render 'comments/comment_form' %>
     <!--we use the comments id style class and the data_blog_id to work with the blogs.coffee script-->
     <div id="comments" data-blog-id="<%= @blog.id %>">
-      <%= render @blog.comments %>
+      <%= render @blog.comments.recent %>
     </div>
   
   
